@@ -1,5 +1,21 @@
+:root {
+	--DarkCyan: hsl(185, 75%, 39%);
+	--DarkBlue: hsl(229, 23%, 23%);
+	--GreyBlue: hsl(227, 10%, 46%);
+	--DarkGray: hsl(0, 0%, 59%);
+	font-family: "Kumbh Sans", sans-serif;
+}
 
-
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
 
 * {
 	margin: 0;
@@ -13,50 +29,89 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: aqua;
-	border: solid 1px;
+	background-color: var(--DarkCyan);
+	overflow: hidden;
+}
+
+.top-circle {
+	z-index: -10;
+	position: absolute;
 	background-image: url("./images/bg-pattern-top.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	top: -35%;
+	left: -30%;
+}
+.bottom-circle {
+	z-index: -10;
+	position: absolute;
+	background-image: url("./images/bg-pattern-bottom.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	bottom: -50%;
+	right: -30%;
 }
 
 main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 20rem;
-	height: 23rem;
-	border-radius: 15px;
-	background-color: blueviolet;
-	border: solid 1px;
+	width: 22rem;
+	height: 24rem;
+	border-radius: 20px;
+	background-color: white;
 }
 
-.cover{
+.cover {
 	width: 100%;
 	border-radius: 15px 15px 0px 0px;
 	display: block;
 }
 
-.avatar{
+.avatar {
+	display: inline;
+	margin-top: -55px;
 	border-radius: 50%;
 	border: solid white 6px;
 }
 
-.info{
+.info {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+h3 {
+	font-weight: 700;
+	color: var(--DarkBlue);
+}
+
+span {
+	color: var(--DarkGray);
+	font-weight: 400;
+}
+
+.stats {
+	display: flex;
+	justify-content: space-around;
 	align-items: center;
 	text-align: center;
 	width: 100%;
 	height: 100%;
-	background-color: yellow;
+	border-top: solid 1px hsl(0, 0%, 90%);
 }
 
-.stats{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	background-color: tomato;
+.stat-name {
+	font-size: 0.75rem;
 }
 
 .attribution {
